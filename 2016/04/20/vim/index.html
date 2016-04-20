@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://hikaru.site/2016/04/20/vim/index.html">
 <meta property="og:site_name" content="Hikaru's blog">
 <meta property="og:description" content="Vim">
-<meta property="og:updated_time" content="2016-04-20T07:29:38.000Z">
+<meta property="og:updated_time" content="2016-04-20T09:55:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim">
 <meta name="twitter:description" content="Vim">
@@ -261,7 +261,27 @@
           
         <p>Vim</p>
 <a id="more"></a>
-<p>fdaf<br>afdafda<br>fdf<br>afda</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;C-h&gt; 删除前一个字符</span><br><span class="line">&lt;C-w&gt; 删除前一个单词</span><br><span class="line">&lt;C-u&gt; 删至行首</span><br><span class="line"></span><br><span class="line">&lt;Esc&gt; 回到普通模式</span><br><span class="line">&lt;C-o&gt; 进入插入模式</span><br><span class="line">&lt;C-[&gt; 回到普通模式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yt, 复制逗号前面文字</span><br><span class="line">&lt;C-r&gt;0 粘贴到光标所在位置</span><br></pre></td></tr></table></figure>
+<ul>
+<li>激活可视模式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">v 激活面向字符的可视模式</span><br><span class="line">V 激活面向行的可视模式 </span><br><span class="line">&lt;C-v&gt; 激活面向列块的可视模式</span><br><span class="line">gv 重选上次的高亮选区</span><br></pre></td></tr></table></figure>
+<ul>
+<li>缩进</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vj</span><br><span class="line">2&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>html操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vit 选中标签内的内容</span><br></pre></td></tr></table></figure>
+<ul>
+<li>替换</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%s/content/copy/g  #%s指全篇文章 /gzhi</span><br><span class="line">1,5s/content/copy 从第一行至第五行执行替换</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Vim折叠</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">zf% 对应标签折叠</span><br><span class="line">zd 打开折叠(折叠后没有回头路)</span><br><span class="line">zo 打开折叠 zc 折叠</span><br><span class="line">zr zm</span><br><span class="line">zR  打开所有折叠</span><br><span class="line">zM 关闭所有折叠</span><br><span class="line">:mkview 保存折叠</span><br><span class="line">:loadview 加载折叠</span><br><span class="line">zj 跳下一个折叠</span><br><span class="line">zk 跳上一个折叠</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -273,7 +293,7 @@
         <p><span>本文标题:</span><a href="/2016/04/20/vim/">vim</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Hikaru 的个人博客">Hikaru</a></p>
         <p><span>发布时间:</span>2016年04月20日 - 15时24分</p>
-        <p><span>最后更新:</span>2016年04月20日 - 15时29分</p>
+        <p><span>最后更新:</span>2016年04月20日 - 17时55分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/04/20/vim/" title="vim">http://hikaru.site/2016/04/20/vim/</a>
             <span class="copy-path" data-clipboard-text="原文: http://hikaru.site/2016/04/20/vim/　　作者: Hikaru" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
