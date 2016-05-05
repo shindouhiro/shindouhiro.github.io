@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ssh | Hikaru&#39;s blog</title>
+  <title>client_side_validations | Hikaru&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SSH">
+  <meta name="description" content="client_side_validations">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh">
-<meta property="og:url" content="http://hikaru.site/2016/04/20/ssh/index.html">
+<meta property="og:title" content="client_side_validations">
+<meta property="og:url" content="http://hikaru.site/2016/05/05/client-side-validations/index.html">
 <meta property="og:site_name" content="Hikaru's blog">
-<meta property="og:description" content="SSH">
-<meta property="og:updated_time" content="2016-04-20T08:10:57.000Z">
+<meta property="og:description" content="client_side_validations">
+<meta property="og:updated_time" content="2016-05-05T07:31:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ssh">
-<meta name="twitter:description" content="SSH">
+<meta name="twitter:title" content="client_side_validations">
+<meta name="twitter:description" content="client_side_validations">
   
     <link rel="alternative" href="/atom.xml" title="Hikaru&#39;s blog" type="application/atom+xml">
   
@@ -217,11 +217,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ssh" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-client-side-validations" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/20/ssh/" class="article-date">
-      <time datetime="2016-04-19T16:00:00.000Z" itemprop="datePublished">2016-04-20</time>
+      <a href="/2016/05/05/client-side-validations/" class="article-date">
+      <time datetime="2016-05-05T07:00:17.000Z" itemprop="datePublished">2016-05-05</time>
 </a>
     </div>
   
@@ -234,7 +234,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ssh
+      client_side_validations
     </h1>
   
 
@@ -243,13 +243,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/Rails/">Rails</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux-标签/">Linux 标签</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rails-标签/">Rails 标签</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -259,8 +259,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>SSH<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line">cd ~/.ssh</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+        <p>client_side_validations<br><a id="more"></a></p>
+<p>Gemfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem &apos;client_side_validations&apos;</span><br><span class="line">bundle</span><br><span class="line">rails g client_side_validations:install</span><br></pre></td></tr></table></figure></p>
+<p>config/initializers/client_side_validations.rb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|</span><br><span class="line">  unless html_tag =~ /^&lt;label/</span><br><span class="line">    %&#123;&lt;div class=&quot;field_with_errors&quot;&gt;#&#123;html_tag&#125;&lt;label for=&quot;#&#123;instance.send(:tag</span><br><span class="line">  else</span><br><span class="line">    %&#123;&lt;div class=&quot;field_with_errors&quot;&gt;#&#123;html_tag&#125;&lt;/div&gt;&#125;.html_safe</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line">去掉注释!</span><br></pre></td></tr></table></figure>
+<p>application.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//= require rails.validations</span><br></pre></td></tr></table></figure>
+<p>FormBuilder</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= form_for @user, validate: true do |f| %&gt;</span><br><span class="line">&lt;%= f.text_field :name, validate: false %&gt;</span><br><span class="line">&lt;%= f.text_field :name, validate: &#123; presence: false &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -269,13 +275,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/04/20/ssh/">ssh</a></p>
+        <p><span>本文标题:</span><a href="/2016/05/05/client-side-validations/">client_side_validations</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Hikaru 的个人博客">Hikaru</a></p>
-        <p><span>发布时间:</span>2016年04月20日 - 00时00分</p>
-        <p><span>最后更新:</span>2016年04月20日 - 16时10分</p>
+        <p><span>发布时间:</span>2016年05月05日 - 15时00分</p>
+        <p><span>最后更新:</span>2016年05月05日 - 15时31分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/04/20/ssh/" title="ssh">http://hikaru.site/2016/04/20/ssh/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://hikaru.site/2016/04/20/ssh/　　作者: Hikaru" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/05/05/client-side-validations/" title="client_side_validations">http://hikaru.site/2016/05/05/client-side-validations/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hikaru.site/2016/05/05/client-side-validations/　　作者: Hikaru" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -288,15 +294,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/04/20/vim/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          vim
-        
-      </div>
-    </a>
   
+    <a href="/2016/04/28/lemp环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lemp环境搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -367,7 +369,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/04/20/ssh/" data-title="ssh" data-url="http://hikaru.site/2016/04/20/ssh/"></div>
+    <div class="ds-thread" data-thread-key="2016/05/05/client-side-validations/" data-title="client_side_validations" data-url="http://hikaru.site/2016/05/05/client-side-validations/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -390,13 +392,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/04/20/vim/" title="上一篇: vim">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/04/28/lemp环境搭建/" title="下一篇: lemp环境搭建">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/05/client-side-validations/">client_side_validations</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/28/lemp环境搭建/">lemp环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/让命令行飞起来/">让命令行飞起来</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/26/lean-ruby/">lean_ruby</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/25/ruby爬虫/">ruby爬虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/21/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/vim/">vim</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/ssh/">ssh</a></li></ul>
